@@ -10,7 +10,7 @@ class KDPVGenerator:
     MAX_WIDTH = 800
     MAX_HEIGHT = 300
 
-    BACKGROUND_COLOR = Color('#08327d')
+    BACKGROUND_COLOR = Color('#C1392B')
     FONT_COLOR = Color('#e1e0dd')
 
     FONT = 'static/CaviarDreams.ttf'
