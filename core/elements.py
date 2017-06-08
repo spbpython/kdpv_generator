@@ -8,7 +8,6 @@ from PIL import ImageDraw as PILImageDraw
 
 
 __all__ = (
-    'ElementType',
     'Line',
     'Rectangle',
     'Text',
@@ -16,15 +15,7 @@ __all__ = (
 )
 
 
-class ElementType:
-    LINE = 1
-    RECTANGLE = 2
-    TEXT = 3
-    IMAGE = 4
-
-
 class Element:
-    TYPE = None
 
     def __init__(self, position: tuple):
         self.position = position
@@ -38,7 +29,6 @@ class Element:
 
 
 class Line(Element):
-    TYPE = ElementType.LINE
 
     def __init__(self, end_position: tuple, color: str, width: int, **kwargs):
         self.end_position = end_position
@@ -69,7 +59,6 @@ class Rectangle(Element):
 
 
 class Text(Element):
-    TYPE = ElementType.TEXT
 
     def __init__(self, text: str, color: str, font: str, font_size: int, **kwargs):
         self.text = text
@@ -87,7 +76,6 @@ class Text(Element):
 
 
 class Image(Element):
-    TYPE = ElementType.IMAGE
 
     def __init__(self, src: str = None, file: str = None, size: tuple = None, size_percent: tuple = None, **kwargs):
         self.src = src
