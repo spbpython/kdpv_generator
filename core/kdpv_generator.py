@@ -51,7 +51,7 @@ class KDPVGenerator:
 
                 with Image(filename='static/logo.png') as logo_img:
                     context.composite(operator='atop', left=300, top=top_margin,
-                                      width=150, height=150, image=logo_img)
+                                      width=logo_img.width / 3, height=logo_img.height / 3, image=logo_img)
 
                 with Image(file=speaker_image) as speaker_img:
                     speaker_width = 200
