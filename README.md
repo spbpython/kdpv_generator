@@ -12,4 +12,4 @@ Python 3.6, wand
 - `python run.py`
 
 ### what can be improved
-see Issues.
+see [Issues](https://github.com/spbpython/kdpv_generator/issues).
