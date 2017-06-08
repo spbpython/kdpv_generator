@@ -6,10 +6,10 @@ filename: kdpb.png  # optional
 
 # Default fonts
 fonts:
-  default: static/CaviarDreams.ttf
-  default_bold: static/CaviarDreams_Bold.ttf
-  default_italic: static/CaviarDreams_Italic.ttf
-  default_bold_italic: static/CaviarDreams_BoldItalic.ttf
+  default: assets/fonts/CaviarDreams.ttf
+  default_bold: assets/fonts/CaviarDreams_Bold.ttf
+  default_italic: assets/fonts/CaviarDreams_Italic.ttf
+  default_bold_italic: assets/fonts/CaviarDreams_BoldItalic.ttf
 
 # Elements
 elements:
