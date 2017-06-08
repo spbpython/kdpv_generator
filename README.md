@@ -1,6 +1,6 @@
 ### purpose
 generating images like this:
-![sample](http://i.imgur.com/s5p89aw.png)
+![sample](http://i.imgur.com/wYwCg0X.png)
 
 ### stack
 Python 3.6, wand
