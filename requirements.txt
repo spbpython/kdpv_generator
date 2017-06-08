@@ -1,5 +1,3 @@
-py==1.4.34
+Pillow==4.1.1
 pyaml==16.12.2
-pytest==3.1.1
 PyYAML==3.12
-Wand==0.4.4
