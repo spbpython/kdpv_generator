@@ -1,5 +1,6 @@
 ### purpose
-generating images like this: (TODO embed here sample screenshot)
+generating images like this:
+![sample](http://i.imgur.com/a4dv3TM.png)
 
 ### stack
 Python 3.6, wand
