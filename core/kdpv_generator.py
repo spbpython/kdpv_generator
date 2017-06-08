@@ -8,7 +8,8 @@ from wand.image import Image
 class KDPVGenerator:
     MAX_WIDTH = 800
     MAX_HEIGHT = 300
-    BACKGROUND_COLOR = '#2ca5e0'
+    BACKGROUND_COLOR = '#37bbe4'
+    FONT_COLOR = '#35342f'
 
     def __init__(
             self,
@@ -33,7 +34,7 @@ class KDPVGenerator:
         top_margin = 15
 
         with Drawing() as context:
-            context.stroke_color = Color('black')
+            context.stroke_color = Color(self.FONT_COLOR)
             context.stroke_width = 0.1
             context.font = 'Lucida Console'
             with Image(width=self.MAX_WIDTH,
