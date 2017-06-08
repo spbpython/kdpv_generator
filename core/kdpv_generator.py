@@ -9,7 +9,8 @@ class KDPVGenerator:
     MAX_WIDTH = 800
     MAX_HEIGHT = 300
     BACKGROUND_COLOR = '#37bbe4'
-    FONT_COLOR = '#35342f'
+    FONT_FILL_COLOR = '#35342f'
+    FONT_NAME = 'Lucida Console'
 
     def __init__(
             self,
@@ -34,9 +35,9 @@ class KDPVGenerator:
         top_margin = 15
 
         with Drawing() as context:
-            context.stroke_color = Color(self.FONT_COLOR)
+            context.fill_color = Color(self.FONT_FILL_COLOR)
             context.stroke_width = 0.1
-            context.font = 'Lucida Console'
+            context.font = self.FONT_NAME
             with Image(width=self.MAX_WIDTH,
                        height=self.MAX_HEIGHT,
                        background=Color(self.BACKGROUND_COLOR)) as img:
