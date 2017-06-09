@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
-
 from urllib.request import urlopen
 
 from PIL import Image as PILImage
-from PIL import ImageFont as PILImageFont
 from PIL import ImageDraw as PILImageDraw
-
+from PIL import ImageFont as PILImageFont
 
 __all__ = (
     'Line',
@@ -16,7 +13,6 @@ __all__ = (
 
 
 class Element:
-
     def __init__(self, position: tuple):
         self.position = position
 
@@ -29,7 +25,6 @@ class Element:
 
 
 class Line(Element):
-
     def __init__(self, end_position: tuple, color: str, width: int, **kwargs):
         self.end_position = end_position
         self.color = color
@@ -42,7 +37,6 @@ class Line(Element):
 
 
 class Rectangle(Element):
-
     def __init__(self, size: tuple, color: str, outline: str = None, **kwargs):
         self.size = size
         self.color = color
@@ -59,7 +53,6 @@ class Rectangle(Element):
 
 
 class Text(Element):
-
     def __init__(self, text: str, color: str, font: str, font_size: int, **kwargs):
         self.text = text
         self.color = color
@@ -76,7 +69,6 @@ class Text(Element):
 
 
 class Image(Element):
-
     def __init__(self, src: str = None, file: str = None, size: tuple = None, size_percent: tuple = None, **kwargs):
         self.src = src
         self.file = file
@@ -125,5 +117,3 @@ class Image(Element):
 
         else:
             image.paste(im, self.position)
-
-

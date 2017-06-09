@@ -59,5 +59,4 @@ ENV/
 
 *.png
 !/assets/*
-data.yaml
 data.yml
