@@ -2,7 +2,7 @@
 width: 800
 height: 300
 background: '#FFFFFF'  # optional
-filename: kdpb.png  # optional
+filename: kdpv.png  # optional
 
 # Default fonts
 fonts:
