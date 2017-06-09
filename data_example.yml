@@ -45,9 +45,10 @@ elements:
   - type: image
     file: assets/images/logo.png
     position: [300, -5]
-    size_percent: [0.33, 0.33]
+    size: [250, 156]
 
-  - type: image
+  - type: round_image
     src: http://i.imgur.com/gS70Y9B.jpg
     position: [600, 15]
     size: [180, 270]
+    crop: [0, 0, 180, 180]

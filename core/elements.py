@@ -1,3 +1,4 @@
+from typing import Tuple
 from urllib.request import urlopen
 
 from PIL import Image as PILImage
@@ -9,11 +10,12 @@ __all__ = (
     'Rectangle',
     'Text',
     'Image',
+    'RoundImage',
 )
 
 
 class Element:
-    def __init__(self, position: tuple):
+    def __init__(self, position: Tuple[int, int]):
         self.position = position
 
     @staticmethod
@@ -25,7 +27,7 @@ class Element:
 
 
 class Line(Element):
-    def __init__(self, end_position: tuple, color: str, width: int, **kwargs):
+    def __init__(self, end_position: Tuple[int, int], color: str, width: int, **kwargs):
         self.end_position = end_position
         self.color = color
         self.width = width
@@ -37,7 +39,7 @@ class Line(Element):
 
 
 class Rectangle(Element):
-    def __init__(self, size: tuple, color: str, outline: str = None, **kwargs):
+    def __init__(self, size: Tuple[int, int], color: str, outline: str = None, **kwargs):
         self.size = size
         self.color = color
         self.outline = outline
@@ -69,17 +71,24 @@ class Text(Element):
 
 
 class Image(Element):
-    def __init__(self, src: str = None, file: str = None, size: tuple = None, size_percent: tuple = None, **kwargs):
+    def __init__(
+            self,
+            src: str = None,
+            file: str = None,
+            size: Tuple[int, int] = None,
+            crop: Tuple[int, int, int, int] = None,
+            **kwargs
+    ):
         self.src = src
         self.file = file
         self.size = size
-        self.size_percent = size_percent
+        self.crop = crop
         super(Image, self).__init__(**kwargs)
 
     def _download_image(self):
         return urlopen(self.src)
 
-    def _load_image(self):
+    def _load_image(self) -> PILImage.Image:
         if self.src:
             im = self._download_image()
         elif self.file:
@@ -89,31 +98,62 @@ class Image(Element):
 
         return PILImage.open(im)
 
-    def _resize_image(self, image: PILImage.Image):
-        new_size = None
-
+    def _resize_image(self, image: PILImage.Image) -> PILImage.Image:
         if self.size:
-            new_size = self.size
-
-        elif self.size_percent:
-            w, h = image.size
-            rw, rh = self.size_percent
-            new_size = (w * rw, h * rh)
-
-        if new_size:
-            image.thumbnail(new_size, PILImage.LANCZOS)
+            image = image.resize(self.size, PILImage.LANCZOS)
 
         return image
+
+    def _crop_image(self, image: PILImage.Image) -> PILImage.Image:
+        if self.crop:
+            return image.crop(self.crop)
+
+        return image
+
+    def _draw_image_with_alpha(self, image: PILImage.Image, image2: PILImage.Image):
+        im2 = PILImage.new('RGBA', image.size, (0, 0, 0, 0))
+        im2.paste(image2, self.position)
+        im2 = PILImage.alpha_composite(image, im2)
+        image.paste(im2, (0, 0))
+
+    def _draw_image(self, image: PILImage.Image, image2: PILImage.Image):
+        if image2.mode == 'RGBA':
+            self._draw_image_with_alpha(image, image2)
+
+        else:
+            image.paste(image2, self.position)
 
     def draw(self, image: PILImage.Image):
         im = self._load_image()
         im = self._resize_image(im)
+        im = self._crop_image(im)
+        self._draw_image(image, im)
 
-        if im.mode == 'RGBA':
-            im2 = PILImage.new('RGBA', image.size, (0, 0, 0, 0))
-            im2.paste(im, self.position)
-            im2 = PILImage.alpha_composite(image, im2)
-            image.paste(im2, (0, 0))
 
-        else:
-            image.paste(im, self.position)
+class RoundImage(Image):
+    ANTIALIAS_RATIO = 5
+
+    @classmethod
+    def _round_image(cls, image: PILImage.Image):
+
+        if image.mode != 'RGBA':
+            image = image.convert('RGBA')
+
+        mask_size = image.size[0] * cls.ANTIALIAS_RATIO, image.size[1] * cls.ANTIALIAS_RATIO
+        mask = PILImage.new('L', mask_size, color=0)
+        mask_draw = cls._get_image_draw(mask)
+        mask_draw.ellipse(((0, 0), mask.size), fill=255)
+
+        mask = mask.resize(image.size, PILImage.LANCZOS)
+
+        canvas = PILImage.new('RGBA', image.size, color=(0, 0, 0, 0))
+        canvas.paste(image, mask=mask)
+
+        return canvas
+
+    def draw(self, image: PILImage.Image):
+        im = self._load_image()
+        im = self._resize_image(im)
+        im = self._crop_image(im)
+        im = self._round_image(im)
+        self._draw_image(image, im)
