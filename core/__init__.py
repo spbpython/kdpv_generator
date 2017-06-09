@@ -1,1 +1,1 @@
-from .kdpv_generator import KDPVGenerator
+from .generator import KDPVGenerator

@@ -1,5 +1,53 @@
-speaker_image_url: "http://i.imgur.com/gS70Y9B.jpg"
-talk: "Программируем в Minecraft: malmo и malmo challenge"
-speaker: "Ольга Тележная, Microsoft"
-when: "13 июня"
-where: "БЦ «ТелекомСПб», конференц-зал DataArt, 3-й этаж, вход с ул. Гельсингфорсская"
+# Base config
+width: 800
+height: 300
+background: '#FFFFFF'  # optional
+filename: kdpb.png  # optional
+
+# Default fonts
+fonts:
+  default: assets/fonts/CaviarDreams.ttf
+  default_bold: assets/fonts/CaviarDreams_Bold.ttf
+  default_italic: assets/fonts/CaviarDreams_Italic.ttf
+  default_bold_italic: assets/fonts/CaviarDreams_BoldItalic.ttf
+
+# Elements
+elements:
+  - type: rectangle
+    position: [0, 0]
+    size: [800, 300]
+    color: '#C1392B'
+
+  - type: text
+    text: |
+      SPb Python
+      Meetup
+    position: [20, 15]
+    font: default
+    font_size: 50
+    color: '#E1E0DD'
+
+  - type: text
+    text: >
+      Программируем в Minecraft: malmo и malmo challenge
+    position: [20, 165]
+    font: default_bold
+    font_size: 21
+    color: '#E1E0DD'
+
+  - type: text
+    text: Ольга Тележная, Microsoft
+    position: [20, 215]
+    font: default_bold_italic
+    font_size: 17
+    color: '#E1E0DD'
+
+  - type: image
+    file: assets/images/logo.png
+    position: [300, -5]
+    size_percent: [0.33, 0.33]
+
+  - type: image
+    src: http://i.imgur.com/gS70Y9B.jpg
+    position: [600, 15]
+    size: [180, 270]
