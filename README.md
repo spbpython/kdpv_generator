@@ -1,5 +1,6 @@
 ### purpose
-generating images like this:
+generating images like this:  
+
 ![sample](https://secure.meetupstatic.com/photos/event/c/3/b/4/600_461750100.jpeg)
 
 ### stack
