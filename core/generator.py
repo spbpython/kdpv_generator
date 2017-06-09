@@ -7,7 +7,7 @@ from .elements import Line, Rectangle, Text, Image
 class KDPVGenerator:
     def __init__(
             self, width: int, height: int, fonts: dict, elements: list,
-            background: str = None, filename: str = 'kdpb.png'
+            background: str = None, filename: str = 'kdpv.png'
     ):
         self.width = width
         self.height = height
