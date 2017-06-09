@@ -8,4 +8,5 @@
 
 ### special thanks to
 
+* [Dmitry Alimov](//github.com/delimitry)
 * [Sergey Sokolov](//github.com/teners)
