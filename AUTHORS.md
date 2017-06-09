@@ -4,4 +4,8 @@
 
 ### contributors
 
-* [Dmitry](//github.com/karech)
+* [Dmitry Sorokin](//github.com/karech)
+
+### special thanks to
+
+* [Sergey Sokolov](//github.com/teners)
