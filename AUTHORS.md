@@ -1,12 +1,12 @@
 ### maintainers
 
 * [Dmitry Nazarov](//github.com/nazarov-tech)
+* [Dmitry Sorokin](//github.com/karech)
 
 ### contributors
 
-* [Dmitry Sorokin](//github.com/karech)
+* [Dmitry Alimov](//github.com/delimitry)
 
 ### special thanks to
 
-* [Dmitry Alimov](//github.com/delimitry)
 * [Sergey Sokolov](//github.com/teners)
