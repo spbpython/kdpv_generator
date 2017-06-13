@@ -1,7 +1,7 @@
 import yaml
 from PIL import Image as PILImage
 
-from .elements import Line, Rectangle, Text, Image, RoundImage
+from .elements import Line, Rectangle, Ellipse, Text, Image, RoundImage
 
 
 class KDPVGenerator:
@@ -32,6 +32,7 @@ class KDPVGenerator:
         return {
             'line': Line,
             'rectangle': Rectangle,
+            'ellipse': Ellipse,
             'text': Text,
             'image': Image,
             'round_image': RoundImage,

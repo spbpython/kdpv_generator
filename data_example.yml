@@ -47,6 +47,11 @@ elements:
     position: [300, -5]
     size: [250, 156]
 
+  - type: ellipse
+    position: [595, 10]
+    size: [190, 190]
+    color: '#E1E0DD'
+
   - type: round_image
     src: http://i.imgur.com/gS70Y9B.jpg
     position: [600, 15]

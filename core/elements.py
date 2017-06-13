@@ -8,6 +8,7 @@ from PIL import ImageFont as PILImageFont
 __all__ = (
     'Line',
     'Rectangle',
+    'Ellipse',
     'Text',
     'Image',
     'RoundImage',
@@ -52,6 +53,40 @@ class Rectangle(Element):
         w, h = self.size
 
         draw.rectangle((x, y, x + w, y + h), fill=self.color, outline=self.outline)
+
+
+class Ellipse(Element):
+    ANTIALIAS_RATIO = 5
+
+    def __init__(
+            self,
+            position: Tuple[int, int],
+            size: Tuple[int, int],
+            color: str = None,
+            **kwargs
+    ):
+        self.position = position
+        self.size = size
+        self.color = color
+        super(Ellipse, self).__init__(position, **kwargs)
+
+    def _draw_ellipse(self, image: PILImage.Image):
+        x, y = self.position
+        w, h = self.size
+        # create mask in higher resolution for antialias effect
+        mask_size = image.size[0] * self.ANTIALIAS_RATIO, image.size[1] * self.ANTIALIAS_RATIO
+        mask = PILImage.new('L', mask_size, color='black')
+        mask_draw = PILImageDraw.Draw(mask)
+        left, top = x * self.ANTIALIAS_RATIO, y * self.ANTIALIAS_RATIO
+        right, bottom = left + w * self.ANTIALIAS_RATIO, top + h * self.ANTIALIAS_RATIO
+        # draw ellipse and then downscale from higher resolution for antialias effect
+        mask_draw.ellipse((left, top, right, bottom), fill='white')
+        mask = mask.resize(image.size, PILImage.LANCZOS)
+        image.paste(self.color, mask=mask)
+        return image
+
+    def draw(self, image: PILImage.Image):
+        self._draw_ellipse(image)
 
 
 class Text(Element):
