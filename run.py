@@ -1,10 +1,6 @@
-import sys
-
+import argparse
+import os
 from core import KDPVGenerator
-
-
-def print_help():
-    print('Usage: python run.py [data.yml]')
 
 
 def generate(filename):
@@ -13,17 +9,15 @@ def generate(filename):
 
 
 def main():
-    if len(sys.argv) < 2:
-        filename = 'data.yml'
-
+    parser = argparse.ArgumentParser(description='KDPV Generator')
+    parser.add_argument('filename', nargs='?', default='data.yml', help='data file (default: data.yml)')
+    args = parser.parse_args()
+    if not args.filename:
+        parser.print_help()
     else:
-        filename = sys.argv[1]
-
-    if filename in {'help', '-h', '--help'}:
-        print_help()
-
-    else:
-        generate(filename)
+        if not os.path.isfile(args.filename):
+            exit('Unable to open file: {}'.format(args.filename))
+        generate(args.filename)
 
 
 if __name__ == '__main__':
