@@ -11,4 +11,4 @@
 
 * [Sergey Sokolov](//github.com/teners)
 * [Andrey Sitnik](//github.com/ai)
-* [Igor Kalachev](//github.com/buldoser)
+* [Igor Kalachev](//github.com/qmodu)
