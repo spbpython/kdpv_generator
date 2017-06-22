@@ -10,3 +10,5 @@
 ### special thanks to
 
 * [Sergey Sokolov](//github.com/teners)
+* [Andrey Sitnik](//github.com/ai)
+* [Igor Kalachev](//github.com/buldoser)
