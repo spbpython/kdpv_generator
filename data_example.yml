@@ -37,7 +37,7 @@ elements:
     color: '#FFF9FF'
 
   - type: text
-    text: Валентин Лупачёв, C.Nord
+    text: Валентин Лупачев, C.Nord
     position: [20, 220]
     font: default
     font_size: 25

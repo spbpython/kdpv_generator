@@ -1,7 +1,7 @@
 ### purpose
 generating images like this:  
 
-![sample](https://secure.meetupstatic.com/photos/event/1/f/d/7/600_462608151.jpeg)
+![sample](https://secure.meetupstatic.com/photos/event/2/0/0/c/600_462608204.jpeg)
 
 ### stack
 Python 3.6, Pillow
