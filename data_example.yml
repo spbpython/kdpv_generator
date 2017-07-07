@@ -7,6 +7,7 @@ filename: kdpv.png  # optional
 # Default fonts
 fonts:
   default: assets/fonts/BebasNeue Regular.ttf
+  special: assets/fonts/Raleway-Bold.ttf
   default_bold: assets/fonts/BebasNeue Bold.ttf
   default_italic: assets/fonts/CaviarDreams_Italic.ttf
   default_bold_italic: assets/fonts/CaviarDreams_BoldItalic.ttf
@@ -16,31 +17,31 @@ elements:
   - type: rectangle
     position: [0, 0]
     size: [800, 300]
-    color: '#C1392B'
+    color: '#F4B13E'
 
   - type: text
     text: |
       SPb Python
       Meetup
     position: [20, 15]
-    font: default
-    font_size: 69
-    color: '#E1E0DD'
+    font: special
+    font_size: 55
+    color: '#4C4034'
 
   - type: text
     text: >
-      Программируем в Minecraft: malmo и malmo challenge
+      Невыдуманные истории про профилирование и оптимизацию
     position: [20, 165]
-    font: default
-    font_size: 30
-    color: '#E1E0DD'
+    font: default_bold
+    font_size: 27
+    color: '#FFF9FF'
 
   - type: text
-    text: Ольга Тележная, Microsoft
-    position: [20, 215]
-    font: default_bold_italic
-    font_size: 19
-    color: '#E1E0DD'
+    text: Валентин Лупачёв, C.Nord
+    position: [20, 220]
+    font: default
+    font_size: 25
+    color: '#FFF9FF'
 
   - type: image
     file: assets/images/logo.png
@@ -50,10 +51,10 @@ elements:
   - type: ellipse
     position: [595, 10]
     size: [190, 190]
-    color: '#E1E0DD'
+    color: '#FFF9FF'
 
   - type: round_image
-    src: http://i.imgur.com/gS70Y9B.jpg
+    file: lupachev.jpg
     position: [600, 15]
     size: [180, 270]
     crop: [0, 0, 180, 180]
