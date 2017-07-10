@@ -91,7 +91,7 @@ class Ellipse(Element):
 
 class Text(Element):
     def __init__(self, text: str, color: str, font: str, font_size: int, **kwargs):
-        self.text = text
+        self.text = text.strip()
         self.color = color
         self.font = font
         self.font_size = font_size
