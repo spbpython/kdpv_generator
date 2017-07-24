@@ -1,0 +1,33 @@
+# Base config
+width: 800
+height: 300
+background: '#FFFFFF'  # optional
+filename: drinkup.png  # optional
+
+# Default fonts
+fonts:
+  regular: assets/fonts/LeagueGothicCyrillic.ttf
+  special: assets/fonts/Raleway-Bold.ttf
+
+# Elements
+elements:
+  - type: rectangle
+    position: [0, 0]
+    size: [800, 300]
+    color: '#de3d83'
+
+  - type: text
+    text: >
+      дринкап
+    position: [207, 50]
+    font: regular
+    font_size: 152
+    color: '#000000'
+
+  - type: text
+    text: >
+      дринкап
+    position: [210, 50]
+    font: regular
+    font_size: 150
+    color: '#fef9f7'

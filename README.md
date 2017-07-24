@@ -10,7 +10,7 @@ Python 3.6, Pillow
 ### how to use
 - install system requirements (`cat system_requirements.txt | xargs apt-get install -y`)
 - install python requirements (`pip install -r requirements.txt`)
-- create data.yml from data_example.yml (`cp data_example.yml data.yml`)
+- create data.yml from meetup.yml (`cp configs/data_example.yml data.yml`)
 - `python run.py`
 
 ### what can be improved
