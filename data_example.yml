@@ -2,15 +2,12 @@
 width: 800
 height: 300
 background: '#FFFFFF'  # optional
-filename: kdpv.png  # optional
+filename: drinkup.png  # optional
 
 # Default fonts
 fonts:
-  default: assets/fonts/BebasNeue Regular.ttf
+  regular: assets/fonts/LeagueGothicCyrillic.ttf
   special: assets/fonts/Raleway-Bold.ttf
-  default_bold: assets/fonts/BebasNeue Bold.ttf
-  default_italic: assets/fonts/CaviarDreams_Italic.ttf
-  default_bold_italic: assets/fonts/CaviarDreams_BoldItalic.ttf
 
 # Elements
 elements:
@@ -32,14 +29,14 @@ elements:
     text: >
       Невыдуманные истории про профилирование и оптимизацию
     position: [20, 165]
-    font: default_bold
+    font: regular
     font_size: 27
     color: '#FFF9FF'
 
   - type: text
     text: Валентин Лупачев, C.Nord
     position: [20, 220]
-    font: default
+    font: regular
     font_size: 25
     color: '#FFF9FF'
 
