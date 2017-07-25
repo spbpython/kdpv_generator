@@ -1,8 +1,9 @@
 ### purpose
 generating images like this:  
 
-![sample](https://secure.meetupstatic.com/photos/event/2/0/0/c/600_462608204.jpeg)
-![another](https://secure.meetupstatic.com/photos/event/b/1/c/c/600_463125516.jpeg)
+![sample1](https://secure.meetupstatic.com/photos/event/2/0/0/c/600_462608204.jpeg)
+![sample2](https://secure.meetupstatic.com/photos/event/b/1/c/c/600_463125516.jpeg)
+![sample3](http://i.imgur.com/Y8jpmiM.png)
 
 ### stack
 Python 3.6, Pillow
