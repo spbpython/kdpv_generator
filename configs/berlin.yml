@@ -2,7 +2,7 @@
 width: 800
 height: 300
 background: '#FFFFFF'  # optional
-filename: meetup.png  # optional
+filename: berlin.png  # optional
 
 # Default fonts
 fonts:
@@ -14,44 +14,44 @@ elements:
   - type: rectangle
     position: [0, 0]
     size: [800, 300]
-    color: '#F4B13E'
+    color: '#3dbd5d'
 
   - type: text
     text: |
-      SPb Python
-      Meetup
-    position: [20, 15]
+      Python Users
+      Berlin
+    position: [20, 20]
     font: special
-    font_size: 55
-    color: '#4C4034'
+    font_size: 45
+    color: '#303030'
 
   - type: text
     text: >
-      Невыдуманные истории про профилирование и оптимизацию
-    position: [20, 165]
+      The future of pythonic web: ASGI & Daphne
+    position: [20, 140]
     font: regular
-    font_size: 27
+    font_size: 45
     color: '#FFF9FF'
 
   - type: text
-    text: Валентин Лупачев, C.Nord
+    text: Dmitry Nazarov, EXANTE
     position: [20, 220]
     font: regular
-    font_size: 25
-    color: '#FFF9FF'
+    font_size: 30
+    color: '#fbfbfb'
 
   - type: image
-    file: assets/images/logo.png
-    position: [300, -5]
-    size: [250, 156]
+    src: https://docs.poppy-project.org/en/img/logo/python.png
+    position: [317, 22]
+    size: [244, 104]
 
   - type: ellipse
     position: [595, 10]
     size: [190, 190]
-    color: '#FFF9FF'
+    color: '#fbfbfb'
 
   - type: round_image
-    file: lupachev.jpg
+    src: https://pbs.twimg.com/profile_images/856843437273993216/lsl10k5x_400x400.jpg
     position: [600, 15]
-    size: [180, 270]
+    size: [182, 182]
     crop: [0, 0, 180, 180]
