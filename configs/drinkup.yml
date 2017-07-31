@@ -14,20 +14,20 @@ elements:
   - type: rectangle
     position: [0, 0]
     size: [800, 300]
-    color: '#de3d83'
+    color: '#00b8b8'
 
   - type: text
     text: >
-      дринкап
-    position: [207, 50]
+      дринкапъ
+    position: [201, 53]
     font: regular
     font_size: 152
     color: '#000000'
 
   - type: text
     text: >
-      дринкап
-    position: [210, 50]
+      дринкапъ
+    position: [204, 50]
     font: regular
     font_size: 150
-    color: '#fef9f7'
+    color: '#f3f3eb'
