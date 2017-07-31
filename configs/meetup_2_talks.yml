@@ -1,0 +1,114 @@
+# Base config
+width: 900
+height: 450
+background: '#FFFFFF'  # optional
+filename: meetup_2_talks.png  # optional
+
+# Default fonts
+fonts:
+  regular: assets/fonts/LeagueGothicCyrillic.ttf
+  special: assets/fonts/Raleway-Bold.ttf
+
+# Elements
+elements:
+
+# commons
+  - type: rectangle
+    position: [0, 0]
+    size: [900, 100]
+    color: '#ec6b2d'
+
+  - type: rectangle
+    position: [0, 100]
+    size: [900, 175]
+    color: '#333333'
+
+  - type: rectangle
+    position: [0, 275]
+    size: [900, 175]
+    color: '#0d0f05'
+
+  - type: text
+    text: |
+      SPb Python
+      Meetup #27
+    position: [35, 15]
+    font: special
+    font_size: 30
+    color: '#0d0f05'
+
+  - type: image
+    file: assets/images/logo.png
+    position: [225, 8]
+    size: [125, 78]
+
+# first talk
+  - type: text
+    text: >
+      19:00 — 19:40
+    position: [35, 215]
+    font: regular
+    font_size: 27
+    color: '#FFF9FF'
+
+  - type: text
+    text: >
+      Применение Python для решения задач
+      цифровой X-Ray ангиографии
+    position: [35, 165]
+    font: regular
+    font_size: 33
+    color: '#FFF9FF'
+
+  - type: text
+    text: Евгений Прилепин, Aligned Research Group
+    position: [439, 220]
+    font: regular
+    font_size: 22
+    color: '#FFF9FF'
+
+  - type: ellipse
+    position: [723, 108]
+    size: [159, 159]
+    color: '#FFF9FF'
+
+  - type: round_image
+    src: http://i.imgur.com/OCblvUp.jpg
+    position: [725, 110]
+    size: [155, 155]
+    crop: [0, 0, 155, 155]
+
+# second talk
+  - type: text
+    text: >
+      19:45 — 20:25
+    position: [35, 385]
+    font: regular
+    font_size: 27
+    color: '#FFF9FF'
+
+  - type: text
+    text: >
+      Serverless Python
+    position: [35, 340]
+    font: regular
+    font_size: 33
+    color: '#FFF9FF'
+
+  - type: text
+    text: Сергей Соколов, GS Labs
+    position: [551, 390]
+    font: regular
+    font_size: 22
+    color: '#FFF9FF'
+
+  - type: ellipse
+    position: [723, 283]
+    size: [159, 159]
+    color: '#FFF9FF'
+
+  - type: round_image
+    src: http://i.imgur.com/OAh5j04.jpg
+    position: [725, 285]
+    size: [155, 155]
+    crop: [0, 0, 155, 155]
