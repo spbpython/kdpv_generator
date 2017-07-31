@@ -5,13 +5,20 @@ generating images like this:
 ![sample2](https://secure.meetupstatic.com/photos/event/b/1/c/c/600_463125516.jpeg)
 ![sample3](https://secure.meetupstatic.com/photos/event/8/6/7/b/600_463174427.jpeg)
 
+### features
+- draw your image declarative way!
+- cyrillic support
+- custom fonts (ttf, otf) support
+- use local or remote image files
+- auto-crop image file to round form
+
 ### stack
 Python 3.6, Pillow
 
 ### how to use
 - install system requirements (`cat system_requirements.txt | xargs apt-get install -y`)
 - install python requirements (`pip install -r requirements.txt`)
-- create data.yml from meetup.yml (`cp configs/data_example.yml data.yml`)
+- create data.yml from any of existing configs (for example, `cp configs/meetup.yml data.yml`)
 - `python run.py`
 
 ### what can be improved
