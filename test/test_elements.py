@@ -2,11 +2,35 @@
 
 import os
 import pytest
-from core.elements import Ellipse, Rectangle, RoundImage
+from core.elements import Ellipse, Line, Rectangle, RoundImage
 from test.helper import get_image_diff_percentage
 from PIL import Image, ImageDraw
 
 IMAGES_PATH = 'test/images/'
+
+
+def test_line():
+    """Test Line element"""
+    position = (10, 50)
+    end_position = (90, 10)
+    color = '#333555'
+    width = 3
+    canvas_size = (100, 60)
+    canvas_color = '#dddddd'
+
+    # draw Line element
+    image = Image.new('RGB', canvas_size, canvas_color)
+    line = Line(position=position, end_position=end_position, color=color, width=width)
+    line.draw(image)
+
+    # load expected image with Line element
+    expected_image = Image.open(os.path.join(IMAGES_PATH, 'line_80x40.png'))
+
+    # compute the difference between images
+    diff = get_image_diff_percentage(image, expected_image)
+    if diff > 0:
+        raise Exception(
+            'Line element check failed! The difference between result and expected image is {}%!'.format(diff))
 
 
 def test_ellipse():
