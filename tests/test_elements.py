@@ -6,7 +6,7 @@ from core.elements import Ellipse, Line, Rectangle, RoundImage
 from test.helper import get_image_diff_percentage
 from PIL import Image, ImageDraw
 
-IMAGES_PATH = 'test/images/'
+IMAGES_PATH = 'tests/images/'
 
 
 def test_line():
