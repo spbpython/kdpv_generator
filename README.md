@@ -22,8 +22,8 @@ Python 3.6, Pillow
 - `python run.py`
 
 ### tests
-the pytest is used for the tests.
-to run the tests use command:
+the pytest is used for the tests.  
+to run the tests use command:  
 `python3 -m pytest`
 
 ### what can be improved
