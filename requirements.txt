@@ -1,3 +1,4 @@
 Pillow==4.2.1
 pyaml==16.12.2
 PyYAML==3.12
+pytest==3.2.3
