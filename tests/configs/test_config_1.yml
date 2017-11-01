@@ -1,0 +1,28 @@
+# Base config
+width: 800
+height: 300
+background: '#FFFFFF'  # optional
+filename: test_image.png  # optional
+
+# Default fonts
+fonts:
+  default: assets/fonts/BebasNeue Regular.ttf
+  default_bold: assets/fonts/BebasNeue Bold.ttf
+  default_italic: assets/fonts/CaviarDreams_Italic.ttf
+  default_bold_italic: assets/fonts/CaviarDreams_BoldItalic.ttf
+
+# Elements
+elements:
+  - type: rectangle
+    position: [0, 0]
+    size: [800, 300]
+    color: '#B1392B'
+
+  - type: text
+    text: |
+      Test Line 1
+      Test Line 2
+    position: [20, 15]
+    font: default
+    font_size: 69
+    color: '#E1E0DD'

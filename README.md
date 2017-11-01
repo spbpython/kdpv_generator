@@ -21,5 +21,10 @@ Python 3.6, Pillow
 - create data.yml from any of existing configs (for example, `cp configs/meetup.yml data.yml`)
 - `python run.py`
 
+### tests
+the pytest is used for the tests.  
+to run the tests use command:  
+`python3 -m pytest`
+
 ### what can be improved
 see [Issues](https://github.com/spbpython/kdpv_generator/issues).
