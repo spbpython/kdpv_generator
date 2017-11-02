@@ -1,7 +1,7 @@
 # coding: utf-8
 
 import os
-from core.generator import KDPVGenerator
+from ..generator import KDPVGenerator
 
 CONFIGS_PATH = 'tests/configs/'
 
