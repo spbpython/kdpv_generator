@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/spbpython/kdpv_generator.svg?branch=master)](https://travis-ci.org/spbpython/kdpv_generator)
+
 ### purpose
 generating images like this:  
 
