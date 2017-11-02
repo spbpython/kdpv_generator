@@ -1,6 +1,6 @@
 import argparse
 import os
-from core import KDPVGenerator
+from kdpv_generator import KDPVGenerator
 
 
 def generate(filename):
