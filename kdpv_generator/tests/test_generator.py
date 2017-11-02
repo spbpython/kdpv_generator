@@ -3,7 +3,7 @@
 import os
 from ..generator import KDPVGenerator
 
-CONFIGS_PATH = 'tests/configs/'
+CONFIGS_PATH = 'kdpv_generator/tests/configs/'
 
 
 def test_generator_from_yml():

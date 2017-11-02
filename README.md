@@ -18,13 +18,13 @@ Python 3.6, Pillow
 ### how to use
 - install system requirements (`cat system_requirements.txt | xargs apt-get install -y`)
 - install python requirements (`pip install -r requirements.txt`)
-- create data.yml from any of existing configs (for example, `cp configs/meetup.yml data.yml`)
+- create data.yml from any of existing configs (for example, `cp kdpv_generator/configs/meetup.yml data.yml`)
 - `python run.py`
 
 ### tests
 the pytest is used for the tests.  
 to run the tests use command:  
-`python3 -m pytest`
+`python3 -m pytest kdpv_generator`
 
 ### what can be improved
 see [Issues](https://github.com/spbpython/kdpv_generator/issues).

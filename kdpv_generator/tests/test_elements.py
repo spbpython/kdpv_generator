@@ -5,7 +5,7 @@ from ..elements import Ellipse, Line, Rectangle, RoundImage
 from .helper import get_image_diff_percentage
 from PIL import Image, ImageDraw
 
-IMAGES_PATH = 'tests/images/'
+IMAGES_PATH = 'kdpv_generator/tests/images/'
 
 
 def test_line():
