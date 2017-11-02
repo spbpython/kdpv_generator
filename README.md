@@ -15,7 +15,7 @@ generating images like this:
 - auto-crop image file to round form
 
 ### stack
-Python 3.6, Pillow
+Python 3.5/3.6 (<3.5 is not supported due to use of `typing` module.), Pillow
 
 ### how to use
 - install system requirements (`cat system_requirements.txt | xargs apt-get install -y`)
