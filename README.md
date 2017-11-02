@@ -26,7 +26,7 @@ Python 3.5/3.6 (<3.5 is not supported due to use of `typing` module.), Pillow
 ### tests
 the pytest is used for the tests.  
 to run the tests use command:  
-`python3 -m pytest kdpv_generator`
+`python3 -m pytest`
 
 ### what can be improved
 see [Issues](https://github.com/spbpython/kdpv_generator/issues).
