@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/spbpython/kdpv_generator.svg?branch=master)](https://travis-ci.org/spbpython/kdpv_generator)
+
 ### purpose
 generating images like this:  
 
@@ -13,12 +15,12 @@ generating images like this:
 - auto-crop image file to round form
 
 ### stack
-Python 3.6, Pillow
+Python 3.5/3.6 (<3.5 is not supported due to use of `typing` module.), Pillow
 
 ### how to use
 - install system requirements (`cat system_requirements.txt | xargs apt-get install -y`)
 - install python requirements (`pip install -r requirements.txt`)
-- create data.yml from any of existing configs (for example, `cp configs/meetup.yml data.yml`)
+- create data.yml from any of existing configs (for example, `cp kdpv_generator/configs/meetup.yml data.yml`)
 - `python run.py`
 
 ### tests
