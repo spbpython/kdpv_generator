@@ -5,7 +5,8 @@
 
 ### contributors
 
-* [Dmitry Alimov](//github.com/delimitry)
+* [Dmitry Alimov](//github.com/delimitry)  
+* [Sergey Vishnikin](//github.com/armicron)  
 
 ### special thanks to
 
